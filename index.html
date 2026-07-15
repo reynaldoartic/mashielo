@@ -255,8 +255,6 @@
 
     </div>
 
-    </div>
-
   </div>
 
 </section>
@@ -453,9 +451,17 @@
 
     const total = actualizarTotal();
 
+    console.log('Total calculado:', total);
+
     if (total > 0) {
 
       calcResultado.style.display = 'block';
+
+      console.log('Resultado mostrado');
+
+    } else {
+
+      calcResultado.style.display = 'none';
 
     }
 
