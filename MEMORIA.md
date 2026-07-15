@@ -6,11 +6,14 @@
 ```
 mashielo/
 ├── index.html          # Página principal (Hero, Productos, Nosotros, Testimonios, Contacto)
-├── style.css           # Estilos globales
+├── style.css           # Estilos globales (desarrollo)
+├── style.min.css       # Estilos minificados (producción)
 ├── logo.png            # Logo marca
 ├── contacto.html       # Página de contacto con mapa, teléfono y formulario
 ├── qr/
-│   ├── index.html      # Página de pedidos QR (CSS embebido)
+│   ├── index.html      # Página de pedidos QR
+│   ├── style.css       # Estilos QR (desarrollo)
+│   ├── style.min.css   # Estilos QR minificados (producción)
 │   └── logo.png
 └── README.md
 ```
@@ -52,11 +55,11 @@ mashielo/
 - [x] Separar CSS embebido de qr/index.html en archivo externo
 - [x] Mejorar microinteracciones y transiciones
 
-### Fase 3 - Performance (pendiente)
-1. Optimizar imágenes (WebP/AVIF, lazy loading)
-2. Agregar meta tags SEO y Open Graph
-3. Minificar CSS/HTML
-4. Eliminar bloqueo de Google Fonts con font-display: swap
+### Fase 3 - Performance (completada)
+- [x] Optimizar imágenes (WebP/AVIF, lazy loading)
+- [x] Agregar meta tags SEO y Open Graph
+- [x] Minificar CSS/HTML
+- [x] Eliminar bloqueo de Google Fonts con font-display: swap
 
 ### Fase 4 - Funcionalidad (pendiente)
 1. Implementar formulario de pedido que envía a WhatsApp preformado
