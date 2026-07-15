@@ -25,18 +25,75 @@
 
   </div>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <button class="menu-toggle" aria-label="Abrir menú">
 
-  <a class="btn-nav" href="/qr">
-    Pedir ahora
-  </a>
+    <span></span>
+
+    <span></span>
+
+    <span></span>
+
+  </button>
+
+  <div class="header-actions">
+
+    <nav>
+
+      <a href="#inicio">Inicio</a>
+
+      <a href="#productos">Productos</a>
+
+      <a href="#nosotros">Nosotros</a>
+
+      <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <a class="btn-nav" href="/qr">
+      Pedir ahora
+    </a>
+
+  </div>
 
 </header>
+
+<a class="whatsapp-float" href="https://wa.me/59177784414" aria-label="WhatsApp">
+
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.223-.6.223-.133.297-.515.867-.92 1.04-.362.18-.72.298-1.078.112-.36-.18-.766-.298-1.24-.597-.473-.298-.787-.668-1.108-1.108-.298-.36-.298-.786-.013-1.16.19-.26.787-1.04 1.04-1.166.362-.18.787-.037 1.04.18.36.297.787.74 1.04 1.166.252.426.168.9-.006 1.314-.178.428-.668.7-1.04.786-.37.09-.74.037-1.04-.104-.36-.18-.787-.33-1.04-.596-.36-.297-.786-.668-1.04-1.04-.3-.374-.5-.838-.5-1.314 0-.6.3-1.2.7-1.6.4-.4.9-.6 1.4-.6h.1c.5 0 1 .2 1.4.6.4.4.6 1 .6 1.6 0 .5-.2 1-.5 1.4-.3.4-.7.8-1.1 1.1-.4.3-.8.5-1.3.5-.5 0-1-.2-1.4-.6-.4-.4-.6-1-.6-1.6 0-.5.2-1 .5-1.4.3-.4.7-.7 1.2-.9.5-.2 1-.2 1.5 0 .5.2 1 .6 1.3 1 .4.4.6.9.6 1.4 0 .5-.2 1-.6 1.4-.4.4-.9.6-1.4.6h-.1c-.5 0-1-.2-1.4-.6-.4-.4-.6-1-.6-1.6 0-.5.2-1 .5-1.4.3-.4.7-.7 1.2-.9.5-.2 1-.2 1.5 0 .5.2 1 .6 1.3 1 .4.4.6.9.6 1.4 0 .5-.2 1-.6 1.4-.4.4-.9.6-1.4.6h-.1c-.5 0-1-.2-1.4-.6-.4-.4-.6-1-.6-1.6 0-.5.2-1 .5-1.4.3-.4.7-.7 1.2-.9.5-.2 1-.2 1.5 0 .5.2 1 .6 1.3 1 .4.4.6.9.6 1.4z"/>
+
+  </svg>
+
+</a>
+
+<script>
+
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  const headerActions = document.querySelector('.header-actions');
+
+  menuToggle.addEventListener('click', () => {
+
+    headerActions.classList.toggle('open');
+
+    menuToggle.classList.toggle('active');
+
+  });
+
+  document.querySelectorAll('.header-actions nav a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+      headerActions.classList.remove('open');
+
+      menuToggle.classList.remove('active');
+
+    });
+
+  });
+
+</script>
 
 <section class="hero">
 

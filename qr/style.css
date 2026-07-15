@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(to bottom,#020617,#07152f);
+  color:white;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+  text-align:center;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:32px;
+  padding:40px 30px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.logo{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.logo img{
+  width:180px;
+  max-width:100%;
+  display:block;
+  margin:0 auto;
+  border-radius:24px;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:8px;
+  line-height:1;
+}
+
+.subtitle{
+  color:#3b82f6;
+  font-weight:700;
+  margin-bottom:30px;
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+.text{
+  color:#cbd5e1;
+  line-height:1.7;
+  margin-bottom:35px;
+  font-size:16px;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  padding:22px;
+  border-radius:18px;
+  text-decoration:none;
+  color:white;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:18px;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.green{
+  background:#16a34a;
+}
+
+.blue{
+  background:#2563eb;
+}
+
+.white{
+  background:white;
+  color:#111827;
+}
+
+.dark{
+  background:#111827;
+}
+
+.socials{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+
+.socials a{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#1e293b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:white;
+  font-size:26px;
+  transition:.2s;
+}
+
+.socials a:hover{
+  transform:translateY(-2px);
+}
+
+.footer{
+  margin-top:30px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+@media(max-width:600px){
+
+  .container{
+    padding:30px 20px;
+  }
+
+  h1{
+    font-size:38px;
+  }
+
+  .btn{
+    font-size:18px;
+    padding:18px;
+  }
+
+  .logo img{
+    width:150px;
+  }
+
+}
