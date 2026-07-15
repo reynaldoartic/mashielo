@@ -1,0 +1,21 @@
+{
+  "name": "Mas Hielo",
+  "short_name": "MasHielo",
+  "description": "Hielo sanitizado en La Paz y El Alto. Entregas 24/7.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020817",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

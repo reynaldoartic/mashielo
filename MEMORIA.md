@@ -61,11 +61,11 @@ mashielo/
 - [x] Minificar CSS/HTML
 - [x] Eliminar bloqueo de Google Fonts con font-display: swap
 
-### Fase 4 - Funcionalidad (pendiente)
-1. Implementar formulario de pedido que envía a WhatsApp preformado
-2. Agregar calculadora de cantidades/precios
-3. Implementar PWA básico (manifest + service worker)
-4. Agregar zonas de cobertura de entrega visibles
+### Fase 4 - Funcionalidad (completada)
+- [x] Implementar formulario de pedido que envía a WhatsApp preformado
+- [x] Agregar calculadora de cantidades/precios
+- [x] Implementar PWA básico (manifest + service worker)
+- [x] Agregar zonas de cobertura de entrega visibles
 
 ### Fase 5 - Evolución técnica (opcional)
 1. Evaluar migración a Astro o Vite + vanilla si el sitio crece

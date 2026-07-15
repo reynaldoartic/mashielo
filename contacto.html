@@ -21,6 +21,10 @@
 
   <link rel="stylesheet" href="style.min.css">
 
+  <link rel="manifest" href="../manifest.json">
+
+  <meta name="theme-color" content="#2563eb">
+
 </head>
 <body>
 
@@ -123,19 +127,19 @@
 
     <div class="contacto-form-wrapper">
 
-      <form class="contacto-form" action="https://wa.me/59177784414" method="GET">
+      <form class="contacto-form" id="form-pedido">
 
         <label for="nombre">Nombre</label>
 
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
 
         <label for="telefono">Teléfono</label>
 
-        <input type="tel" id="telefono" name="telefono" placeholder="+591 00000000" required>
+        <input type="tel" id="telefono" placeholder="+591 00000000" required>
 
         <label for="producto">Producto</label>
 
-        <select id="producto" name="producto">
+        <select id="producto">
 
           <option value="Hielo en cubos 5kg">Hielo en cubos 5kg</option>
 
@@ -147,15 +151,43 @@
 
         </select>
 
-        <label for="mensaje">Mensaje</label>
+        <label for="cantidad">Cantidad</label>
 
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
+        <input type="number" id="cantidad" min="1" value="1" required>
 
-        <button type="submit" class="btn-form">Enviar por WhatsApp</button>
+        <label for="mensaje">Mensaje / Dirección</label>
+
+        <textarea id="mensaje" rows="3" placeholder="Contanos qué necesitás o tu dirección de entrega..." required></textarea>
+
+        <button type="submit" class="btn-form">Enviar pedido por WhatsApp</button>
 
       </form>
 
     </div>
+
+    <script>
+
+      document.getElementById('form-pedido').addEventListener('submit', function(e) {
+
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+
+        const telefono = document.getElementById('telefono').value;
+
+        const producto = document.getElementById('producto').value;
+
+        const cantidad = document.getElementById('cantidad').value;
+
+        const mensaje = document.getElementById('mensaje').value;
+
+        const texto = `Hola, deseo realizar un pedido:%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(telefono)}%0A*Producto:* ${encodeURIComponent(producto)}%0A*Cantidad:* ${encodeURIComponent(cantidad)}%0A*Mensaje/Dirección:* ${encodeURIComponent(mensaje)}`;
+
+        window.open(`https://wa.me/59177784414?text=${texto}`, '_blank');
+
+      });
+
+    </script>
 
   </div>
 
@@ -173,7 +205,59 @@
 
   </div>
 
+  <div class="zonas-wrapper">
+
+    <div class="section-header">
+
+      <small>COBERTURA</small>
+
+      <h2>Zonas de entrega</h2>
+
+      <p>Realizamos entregas en las siguientes zonas:</p>
+
+    </div>
+
+    <div class="zonas-grid">
+
+      <div class="zona">
+
+        <h3>La Paz</h3>
+
+        <p>Centro, Sopocachi, Miraflores, San Pedro, Villa Fátima, y más.</p>
+
+      </div>
+
+      <div class="zona">
+
+        <h3>El Alto</h3>
+
+        <p>Centro, Villa Adela, Ciudad Satélite, Senkata, y más.</p>
+
+      </div>
+
+      <div class="zona">
+
+        <h3>Otras zonas</h3>
+
+        <p>Consultá por entregas en zonas aledañas.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+<script>
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.register('/sw.js');
+
+  }
+
+</script>
 
 </body>
 </html>

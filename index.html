@@ -27,6 +27,10 @@
 
   <link rel="stylesheet" href="style.min.css">
 
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#2563eb">
+
 </head>
 <body>
 
@@ -201,6 +205,54 @@
 
 </section>
 
+<section class="calculadora" id="calculadora">
+
+  <div class="section-header">
+
+    <small>CALCULADORA</small>
+
+    <h2>Calculá tu pedido</h2>
+
+    <p>Seleccioná el producto y la cantidad para ver el total.</p>
+
+  </div>
+
+  <div class="calculadora-box">
+
+    <div class="calculadora-form">
+
+      <label for="calc-producto">Producto</label>
+
+      <select id="calc-producto">
+
+        <option value="Hielo en cubos 5kg" data-precio="15">Hielo en cubos 5kg - Bs. 15</option>
+
+        <option value="Hielo en bolsas 10kg" data-precio="25">Hielo en bolsas 10kg - Bs. 25</option>
+
+        <option value="Hielo en escamas 20kg" data-precio="40">Hielo en escamas 20kg - Bs. 40</option>
+
+      </select>
+
+      <label for="calc-cantidad">Cantidad</label>
+
+      <input type="number" id="calc-cantidad" min="1" value="1">
+
+      <div class="calc-total">
+
+        <span>Total:</span>
+
+        <strong id="calc-precio">Bs. 15</strong>
+
+      </div>
+
+      <a class="btn-calculadora" href="/qr">Pedir ahora</a>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="nosotros" id="nosotros">
 
   <div class="nosotros-content">
@@ -334,6 +386,60 @@
   </p>
 
 </footer>
+
+<script>
+
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  const headerActions = document.querySelector('.header-actions');
+
+  menuToggle.addEventListener('click', () => {
+
+    headerActions.classList.toggle('open');
+
+    menuToggle.classList.toggle('active');
+
+  });
+
+  document.querySelectorAll('.header-actions nav a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+      headerActions.classList.remove('open');
+
+      menuToggle.classList.remove('active');
+
+    });
+
+  });
+
+  const calcProducto = document.getElementById('calc-producto');
+
+  const calcCantidad = document.getElementById('calc-cantidad');
+
+  const calcPrecio = document.getElementById('calc-precio');
+
+  function actualizarTotal() {
+
+    const precio = parseFloat(calcProducto.options[calcProducto.selectedIndex].dataset.precio);
+
+    const cantidad = parseInt(calcCantidad.value) || 0;
+
+    calcPrecio.textContent = 'Bs. ' + (precio * cantidad);
+
+  }
+
+  calcProducto.addEventListener('change', actualizarTotal);
+
+  calcCantidad.addEventListener('input', actualizarTotal);
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.register('/sw.js');
+
+  }
+
+</script>
 
 </body>
 </html>
