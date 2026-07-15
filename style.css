@@ -318,15 +318,16 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 0;
-  border-top:1px solid rgba(255,255,255,.08);
+  padding:20px;
+  background:#020817;
+  border-radius:16px;
   font-size:20px;
   color:#cbd5e1;
 }
 
 .calc-total strong{
   color:#16a34a;
-  font-size:32px;
+  font-size:36px;
 }
 
 .btn-calculadora{
@@ -334,9 +335,9 @@ header{
   background:#16a34a;
   color:white;
   text-decoration:none;
-  padding:16px;
-  border-radius:12px;
-  font-size:18px;
+  padding:18px;
+  border-radius:14px;
+  font-size:20px;
   font-weight:700;
   text-align:center;
   transition:.2s;

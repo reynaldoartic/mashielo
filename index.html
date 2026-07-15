@@ -245,7 +245,7 @@
 
       </div>
 
-      <a class="btn-calculadora" href="/qr">Pedir ahora</a>
+      <a class="btn-calculadora" href="https://wa.me/59177784414?text=Hola%2C%20deseo%20realizar%20un%20pedido.">Pedir ahora</a>
 
     </div>
 
@@ -419,19 +419,29 @@
 
   const calcPrecio = document.getElementById('calc-precio');
 
+  const btnCalculadora = document.querySelector('.btn-calculadora');
+
   function actualizarTotal() {
 
     const precio = parseFloat(calcProducto.options[calcProducto.selectedIndex].dataset.precio);
 
     const cantidad = parseInt(calcCantidad.value) || 0;
 
-    calcPrecio.textContent = 'Bs. ' + (precio * cantidad);
+    const total = precio * cantidad;
+
+    calcPrecio.textContent = 'Bs. ' + total;
+
+    btnCalculadora.href = `https://wa.me/59177784414?text=${encodeURIComponent(`Hola, deseo pedir: ${calcProducto.value} x ${cantidad} = Bs. ${total}`)}`;
 
   }
+
+  actualizarTotal();
 
   calcProducto.addEventListener('change', actualizarTotal);
 
   calcCantidad.addEventListener('input', actualizarTotal);
+
+  calcCantidad.addEventListener('change', actualizarTotal);
 
   if ('serviceWorker' in navigator) {
 
