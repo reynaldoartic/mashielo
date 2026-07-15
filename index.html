@@ -237,15 +237,23 @@
 
       <input type="number" id="calc-cantidad" min="1" value="1">
 
-      <div class="calc-total">
+      <button type="button" class="btn-calcular" id="btn-calcular">Calcular</button>
 
-        <span>Total:</span>
+      <div class="calc-resultado" id="calc-resultado" style="display:none;">
 
-        <strong id="calc-precio">Bs. 15</strong>
+        <div class="calc-total">
+
+          <span>Total:</span>
+
+          <strong id="calc-precio">Bs. 0</strong>
+
+        </div>
+
+        <a class="btn-calculadora" id="btn-pedir-calculadora" href="https://wa.me/59177784414" target="_blank">Pedir ahora</a>
 
       </div>
 
-      <a class="btn-calculadora" href="https://wa.me/59177784414?text=Hola%2C%20deseo%20realizar%20un%20pedido.">Pedir ahora</a>
+    </div>
 
     </div>
 
@@ -419,7 +427,11 @@
 
   const calcPrecio = document.getElementById('calc-precio');
 
-  const btnCalculadora = document.querySelector('.btn-calculadora');
+  const btnCalcular = document.getElementById('btn-calcular');
+
+  const calcResultado = document.getElementById('calc-resultado');
+
+  const btnPedirCalculadora = document.getElementById('btn-pedir-calculadora');
 
   function actualizarTotal() {
 
@@ -431,17 +443,23 @@
 
     calcPrecio.textContent = 'Bs. ' + total;
 
-    btnCalculadora.href = `https://wa.me/59177784414?text=${encodeURIComponent(`Hola, deseo pedir: ${calcProducto.value} x ${cantidad} = Bs. ${total}`)}`;
+    btnPedirCalculadora.href = `https://wa.me/59177784414?text=${encodeURIComponent(`Hola, deseo pedir: ${calcProducto.value} x ${cantidad} = Bs. ${total}`)}`;
+
+    return total;
 
   }
 
-  actualizarTotal();
+  btnCalcular.addEventListener('click', () => {
 
-  calcProducto.addEventListener('change', actualizarTotal);
+    const total = actualizarTotal();
 
-  calcCantidad.addEventListener('input', actualizarTotal);
+    if (total > 0) {
 
-  calcCantidad.addEventListener('change', actualizarTotal);
+      calcResultado.style.display = 'block';
+
+    }
+
+  });
 
   if ('serviceWorker' in navigator) {
 
