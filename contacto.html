@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mas Hielo</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+  <div class="logo">
+
+    <img src="../logo.png" alt="Mas Hielo">
+
+    <span>+ HIELO</span>
+
+  </div>
+
+  <nav>
+    <a href="../#inicio">Inicio</a>
+    <a href="../#productos">Productos</a>
+    <a href="../#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <a class="btn-nav" href="/qr">
+    Pedir ahora
+  </a>
+
+</header>
+
+<section class="contacto-page" id="contacto">
+
+  <div class="section-header">
+
+    <small>CONTACTO</small>
+
+    <h2>Estamos para ayudarte</h2>
+
+    <p>Escribinos por WhatsApp, llamanos o completá el formulario.</p>
+
+  </div>
+
+  <div class="contacto-layout">
+
+    <div class="contacto-info">
+
+      <a class="contacto-item" href="https://wa.me/59177784414">
+
+        <div class="contacto-item-icon">📱</div>
+
+        <div>
+
+          <h3>WhatsApp</h3>
+
+          <p>+591 77784414</p>
+
+        </div>
+
+      </a>
+
+      <a class="contacto-item" href="tel:+59177784414">
+
+        <div class="contacto-item-icon">📞</div>
+
+        <div>
+
+          <h3>Teléfono</h3>
+
+          <p>+591 77784414</p>
+
+        </div>
+
+      </a>
+
+      <div class="contacto-item">
+
+        <div class="contacto-item-icon">📍</div>
+
+        <div>
+
+          <h3>Ubicación</h3>
+
+          <p>La Paz y El Alto, Bolivia</p>
+
+        </div>
+
+      </div>
+
+      <div class="contacto-item">
+
+        <div class="contacto-item-icon">🕐</div>
+
+        <div>
+
+          <h3>Horarios</h3>
+
+          <p>Atención 24/7</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="contacto-form-wrapper">
+
+      <form class="contacto-form" action="https://wa.me/59177784414" method="GET">
+
+        <label for="nombre">Nombre</label>
+
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="telefono">Teléfono</label>
+
+        <input type="tel" id="telefono" name="telefono" placeholder="+591 00000000" required>
+
+        <label for="producto">Producto</label>
+
+        <select id="producto" name="producto">
+
+          <option value="Hielo en cubos 5kg">Hielo en cubos 5kg</option>
+
+          <option value="Hielo en bolsas 10kg">Hielo en bolsas 10kg</option>
+
+          <option value="Hielo en escamas 20kg">Hielo en escamas 20kg</option>
+
+          <option value="Otro">Otro</option>
+
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
+
+        <button type="submit" class="btn-form">Enviar por WhatsApp</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="mapa-wrapper">
+
+    <iframe
+
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-68.15%2C-16.55%2C-68.05%2C-16.48&layer=mapnik"
+
+      title="Mapa La Paz y El Alto"
+
+      loading="lazy">
+
+    </iframe>
+
+  </div>
+
+</section>
+
+</body>
+</html>

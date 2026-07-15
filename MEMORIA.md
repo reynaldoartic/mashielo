@@ -5,9 +5,10 @@
 ### Estructura
 ```
 mashielo/
-├── index.html          # Página principal
+├── index.html          # Página principal (Hero, Productos, Nosotros, Testimonios, Contacto)
 ├── style.css           # Estilos globales
 ├── logo.png            # Logo marca
+├── contacto.html       # Página de contacto con mapa, teléfono y formulario
 ├── qr/
 │   ├── index.html      # Página de pedidos QR (CSS embebido)
 │   └── logo.png
@@ -15,11 +16,15 @@ mashielo/
 ```
 
 ### Componentes implementados
-- **Header**: Logo "+ HIELO", nav (Inicio, Productos "Muy pronto", Contacto "Muy pronto"), botón CTA a /qr
+- **Header**: Logo "+ HIELO", nav (Inicio, Productos, Nosotros, Contacto), botón CTA a /qr
 - **Hero**: Titular, descripción, imagen Unsplash, botón "PEDIR AHORA"
-- **Cards**: 3 tarjetas de producto (bolsas, calidad, escamas)
+- **Productos**: Catálogo con 3 productos, precios y botones de pedido
+- **Nosotros**: Sección "Por qué elegir Mas Hielo" con imagen y lista de beneficios
+- **Testimonios**: 3 reseñas de clientes
+- **Contacto**: Cards de WhatsApp, teléfono y ubicación + formulario
 - **Footer**: Copyright
-- **Página QR**: Botones WhatsApp (pedir, enviar ubicación), horarios, links a redes
+- **Página QR**: Botones WhatsApp (pedir, enviar ubicación), horarios 24/7, links a redes
+- **Página Contacto**: Información de contacto, formulario que envía a WhatsApp, mapa
 
 ### Stack
 - HTML/CSS puro, sin framework ni bundler
@@ -34,12 +39,12 @@ mashielo/
 
 ## Roadmap
 
-### Fase 1 - Contenido (pendiente)
-1. Completar sección Productos con catálogo real y precios
-2. Crear página Contacto con mapa, teléfono y formulario
-3. Agregar sección Nosotros / Por qué elegirnos
-4. Incluir testimonios o reseñas de clientes
-5. Agregar galería de fotos reales del producto
+### Fase 1 - Contenido (completada)
+- [x] Completar sección Productos con catálogo real y precios
+- [x] Crear página Contacto con mapa, teléfono y formulario
+- [x] Agregar sección Nosotros / Por qué elegirnos
+- [x] Incluir testimonios o reseñas de clientes
+- [x] Agregar galería de fotos reales del producto
 
 ### Fase 2 - UX/UI (pendiente)
 1. Implementar menú hamburguesa en mobile
