@@ -46,11 +46,11 @@ mashielo/
 - [x] Incluir testimonios o reseñas de clientes
 - [x] Agregar galería de fotos reales del producto
 
-### Fase 2 - UX/UI (pendiente)
-1. Implementar menú hamburguesa en mobile
-2. Agregar botón WhatsApp flotante sticky
-3. Separar CSS embebido de qr/index.html en archivo externo
-4. Mejorar microinteracciones y transiciones
+### Fase 2 - UX/UI (completada)
+- [x] Implementar menú hamburguesa en mobile
+- [x] Agregar botón WhatsApp flotante sticky
+- [x] Separar CSS embebido de qr/index.html en archivo externo
+- [x] Mejorar microinteracciones y transiciones
 
 ### Fase 3 - Performance (pendiente)
 1. Optimizar imágenes (WebP/AVIF, lazy loading)
