@@ -65,8 +65,15 @@ mashielo/
 ### Fase 4 - Funcionalidad (completada)
 - [x] Implementar formulario de pedido que envía a WhatsApp preformado
 - [x] Agregar calculadora de cantidades/precios
+  - Flujo: seleccionar producto/cantidad -> botón "Calcular" -> resultado con total y botón "Pedir ahora" por WhatsApp
+  - Botón "Pedir ahora" abre WhatsApp con mensaje preformateado con el cálculo exacto
 - [x] Implementar PWA básico (manifest + service worker)
 - [x] Agregar zonas de cobertura de entrega visibles
+
+### Ajustes posteriores (2026-07-14)
+- [x] Refactor calculadora: separar cálculo del envío, mostrar resultado solo después de presionar "Calcular"
+- [x] Corregir DOM roto en calculadora por div extra
+- [x] Mejorar landing `/qr/` para mobile: safe areas, tactilidad, accesibilidad, clamp() en fuentes
 
 ### Fase 5 - Evolución técnica (evaluada)
 - [x] Evaluar migración a Astro o Vite + vanilla si el sitio crece
@@ -91,3 +98,16 @@ mashielo/
 - **Mantener stack actual (HTML/CSS puro + Cloudflare Pages).**
 - Ventajas: velocidad máxima, sin dependencias, deploy instantáneo, costo cero.
 - Google Sheets + Apps Script es una buena opción futura si se necesita backend simple sin servidor.
+
+## Historial de sesiones
+
+### Sesión 2026-07-14
+- Completadas Fases 1 a 5 del roadmap inicial
+- Implementadas secciones: Productos, Nosotros, Testimonios, Contacto, Calculadora, Zonas de cobertura
+- Mejoradas UX/UI: menú hamburguesa, botón WhatsApp flotante, microinteracciones
+- Performance: meta tags SEO/OG, preload fuentes, lazy loading, CSS minificado
+- Funcionalidad: formulario WhatsApp preformado, calculadora con flujo separado, PWA básico
+- Landing `/qr/` mejorada para mobile con safe areas y tactilidad
+- Evaluada Fase 5: mantener stack actual, no migrar por ahora
+- Definida Fase 6 futura: posible uso de Google Sheets + Apps Script como backend
+- Próximos pasos pendientes: continuar con Fase 6 cuando el cliente lo solicite
