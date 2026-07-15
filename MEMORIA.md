@@ -28,6 +28,7 @@ mashielo/
 - **Footer**: Copyright
 - **Página QR**: Botones WhatsApp (pedir, enviar ubicación), horarios 24/7, links a redes
 - **Página Contacto**: Información de contacto, formulario que envía a WhatsApp, mapa
+- **Calculadora**: Flujo mejorado: seleccionar producto/cantidad -> botón "Calcular" -> resultado con total y botón "Pedir ahora" por WhatsApp
 
 ### Stack
 - HTML/CSS puro, sin framework ni bundler
@@ -75,7 +76,18 @@ mashielo/
 - [x] Evaluar analytics básico
   - **Conclusión:** Recomendado agregar Cloudflare Web Analytics (sin cookies, sin consentimiento) o GA4 si se necesita detalle. No implementado para respetar privacidad por defecto.
 
+### Fase 6 - Modelo mayor (futuro)
+- [ ] Evaluar Google Sheets + Apps Script como base de datos backend
+  - **Ventaja:** Sin costo, fácil de mantener por el cliente, ideal para productos/precios/stock.
+  - **Consideración:** Apps Script puede exponer datos como API JSON; útil si en el futuro querés precios dinámicos o stock en tiempo real sin cambiar el frontend.
+  - **Sugerencia:** Para este volumen actual, sigue siendo overkill. Guardar como opción si el catálogo crece o se necesita gestión sin tocar código.
+- [ ] Pasos a futuro recomendados
+  1. Si el volumen de pedidos crece, evaluar un formulario que guarde en Sheets para historial.
+  2. Si se suma inventario/stock, usar Apps Script como API y actualizar la calculadora/precios desde la hoja.
+  3. Si el sitio escala a más secciones, evaluar migración a Astro o un SSG.
+  4. Si el cliente necesita autogestionar contenido, evaluar Decap CMS.
+
 ### Recomendación general
 - **Mantener stack actual (HTML/CSS puro + Cloudflare Pages).**
 - Ventajas: velocidad máxima, sin dependencias, deploy instantáneo, costo cero.
-- Próximo paso razonable solo si: aumenta cantidad de páginas, se necesita CMS, o se agrega funcionalidad dinámica.
+- Google Sheets + Apps Script es una buena opción futura si se necesita backend simple sin servidor.
