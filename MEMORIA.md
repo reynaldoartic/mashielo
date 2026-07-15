@@ -67,7 +67,15 @@ mashielo/
 - [x] Implementar PWA básico (manifest + service worker)
 - [x] Agregar zonas de cobertura de entrega visibles
 
-### Fase 5 - Evolución técnica (opcional)
-1. Evaluar migración a Astro o Vite + vanilla si el sitio crece
-2. Implementar CMS headless o estático para gestión de contenido
-3. Agregar analytics básico
+### Fase 5 - Evolución técnica (evaluada)
+- [x] Evaluar migración a Astro o Vite + vanilla si el sitio crece
+  - **Conclusión:** No es necesario migrar por ahora. El sitio es pequeño (~3 páginas), muy rápido en HTML/CSS puro y Cloudflare Pages lo sirve excelente. Si crece mucho (>10 páginas, blog, inventario dinámico), reevaluar.
+- [x] Evaluar CMS headless o estático para gestión de contenido
+  - **Conclusión:** Omitir por ahora. El contenido es estable y no requiere edición frecuente por no técnicos. Si el cliente necesita actualizar precios/productos seguido, considerar Decap CMS o un panel simple.
+- [x] Evaluar analytics básico
+  - **Conclusión:** Recomendado agregar Cloudflare Web Analytics (sin cookies, sin consentimiento) o GA4 si se necesita detalle. No implementado para respetar privacidad por defecto.
+
+### Recomendación general
+- **Mantener stack actual (HTML/CSS puro + Cloudflare Pages).**
+- Ventajas: velocidad máxima, sin dependencias, deploy instantáneo, costo cero.
+- Próximo paso razonable solo si: aumenta cantidad de páginas, se necesita CMS, o se agrega funcionalidad dinámica.
